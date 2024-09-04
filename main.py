@@ -132,7 +132,7 @@ try:
                         content_stream = generate_section(
                             prompt=(title + ": " + content),
                             additional_instructions=additional_instructions,
-                            model="llama3-8b-8192",
+                            model="llama3-70b-8192",
                             groq_provider=st.session_state.groq,
                         )
                         for chunk in content_stream:
