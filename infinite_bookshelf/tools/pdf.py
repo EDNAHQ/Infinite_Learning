@@ -20,26 +20,27 @@ def create_pdf_file(content: str) -> BytesIO:
         <head>
             <style>
                 /* Global Variables */
-                :root {{
+                :root {
                   --text-color: #ffffff;
+                  --background-color: #000000;
                   --main-title-color: #fbb022;
                   --sub-title-color: #d94f8b;
                   --code-background: rgba(51, 51, 51, 0.7);
                   --border-color: #444;
                   --input-background: rgba(34, 34, 34, 0.7);
                   --input-border-color: #4A90E2;
-                }}
+                }
                 
                 /* Print Settings */
                 @page {{
                   size: A4;
-                  margin: 2cm;
+                  margin: 1cm;
                 }}
                 
                 /* Base Styles */
                 body {{
                   margin: 0;
-                  padding: 2cm;
+                  padding: 1cm;
                   background-color: #1a1a1a;
                   color: var(--text-color);
                   font-family: Arial, sans-serif;
