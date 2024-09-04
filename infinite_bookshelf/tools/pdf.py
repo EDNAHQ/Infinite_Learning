@@ -20,61 +20,62 @@ def create_pdf_file(content: str) -> BytesIO:
         <head>
             <style>
                 @page {{
-                    margin: 2cm;
+                    margin: 0;  /* Set margins for print to 0 */
                 }}
                 body {{
-                    background-color: black;  /* Set background to black */
-                    ccolor: white;              /* Set default text color to white */
-                    font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                    font-size: 12pt;
+                    margin: 0;                      /* Remove default margins */
+                    background-color: black;        /* Set background to black */
+                    color: white;                   /* Set default text color to white */
+                    font-family: Arial, sans-serif; 
+                    line-height: 1.6; 
+                    font-size: 12pt; 
                 }}
                 h1, h2, h3, h4, h5, h6 {{
-                    color: white;
-                    margin-top: 1em;
-                    margin-bottom: 0.5em;
+                    color: gold;                   /* Set header color to gold */
+                    margin-top: 1em;              
+                    margin-bottom: 0.5em;         
                 }}
                 p {{
-                    margin-bottom: 0.5em;
+                    margin-bottom: 0.5em;         
                 }}
                 code {{
-                    background-color: #333;
-                    padding: 2px 4px;
-                    border-radius: 4px;
-                    font-family: monospace;
-                    font-size: 0.9em;
+                    background-color: #333;       
+                    padding: 2px 4px;             
+                    border-radius: 4px;           
+                    font-family: monospace;       
+                    font-size: 0.9em;             
                 }}
                 pre {{
-                    background-color: #333;
-                    padding: 1em;
-                    border-radius: 4px;
-                    white-space: pre-wrap;
-                    word-wrap: break-word;
+                    background-color: #333;       
+                    padding: 1em;                 
+                    border-radius: 4px;           
+                    white-space: pre-wrap;        
+                    word-wrap: break-word;        
                 }}
                 blockquote {{
-                    border-left: 4px solid #777;
-                    padding-left: 1em;
-                    margin-left: 0;
-                    font-style: italic;
+                    border-left: 4px solid #777;   
+                    padding-left: 1em;            
+                    margin-left: 0;               
+                    font-style: italic;            
                 }}
                 table {{
-                    border-collapse: collapse;
-                    width: 100%;
-                    margin-bottom: 1em;
-                    color: white;               
+                    border-collapse: collapse;     
+                    width: 100%;                  
+                    margin-bottom: 1em;           
+                    color: white;                 
                 }}
                 th, td {{
-                    border: 1px solid #444;
-                    padding: 8px;
-                    text-align: left;
+                    border: 1px solid #444;       
+                    padding: 8px;                 
+                    text-align: left;             
                 }}
                 th {{
-                    background-color: #555;
+                    background-color: #555;       
                 }}
                 input, textarea {{
-                    border-color: #4A90E2 !important;
-                    color: white;                /* Change text color in inputs and textareas */
-                    background-color: #222;      /* Set a dark background for inputs */
+                    border-color: #4A90E2 !important; 
+                    color: white;                  /* Change text color in inputs and textareas */
+                    background-color: #222;        /* Set a dark background for inputs */
                 }}
             </style>
         </head>
