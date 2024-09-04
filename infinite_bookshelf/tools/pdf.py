@@ -19,64 +19,113 @@ def create_pdf_file(content: str) -> BytesIO:
     <html>
         <head>
             <style>
-                @page {{
-                    margin: 2cm;  /* Set margins for print to 1cm */
-                }}
-                body {{
-                    margin: 1cm;                      /* Remove default margins */
-                    background-color: black;        /* Set background to black */
-                    color: white;                   /* Set default text color to white */
-                    font-family: 'Poppins', sans-serif; 
-                    line-height: 1.6; 
-                    font-size: 12pt; 
-                }}
-                h1, h2, h3, h4, h5, h6 {{
-                    color: gold;                   /* Set header color to gold */
-                    margin-top: 1em;              
-                    margin-bottom: 0.5em;         
-                }}
-                p {{
-                    margin-bottom: 0.5em;         
-                }}
-                code {{
-                    background-color: #333;       
-                    padding: 2px 4px;             
-                    border-radius: 4px;           
-                    font-family: monospace;       
-                    font-size: 0.9em;             
-                }}
-                pre {{
-                    background-color: #333;       
-                    padding: 1em;                 
-                    border-radius: 4px;           
-                    white-space: pre-wrap;        
-                    word-wrap: break-word;        
-                }}
-                blockquote {{
-                    border-left: 4px solid #777;   
-                    padding-left: 1em;            
-                    margin-left: 0;               
-                    font-style: italic;            
-                }}
-                table {{
-                    border-collapse: collapse;     
-                    width: 100%;                  
-                    margin-bottom: 1em;           
-                    color: white;                 
-                }}
-                th, td {{
-                    border: 1px solid #444;       
-                    padding: 8px;                 
-                    text-align: left;             
-                }}
-                th {{
-                    background-color: #555;       
-                }}
-                input, textarea {{
-                    border-color: #4A90E2 !important; 
-                    color: white;                  /* Change text color in inputs and textareas */
-                    background-color: #222;        /* Set a dark background for inputs */
-                }}
+                /* Global Variables */
+                    :root {
+                      --text-color: #ffffff;
+                      --main-title-color: #fbb022;
+                      --sub-title-color: #d94f8b;
+                      --code-background: rgba(51, 51, 51, 0.7);
+                      --border-color: #444;
+                      --input-background: rgba(34, 34, 34, 0.7);
+                      --input-border-color: #4A90E2;
+                    }
+                    
+                    /* Print Settings */
+                    @page {
+                      size: A4;
+                      margin: 2cm;
+                    }
+                    
+                    /* Base Styles */
+                    body {
+                      margin: 0;
+                      padding: 2cm;
+                      background-image: url('path/to/your/background-image.jpg');
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-attachment: fixed;
+                      color: var(--text-color);
+                      font-family: 'Poppins', sans-serif;
+                      line-height: 1.6;
+                      font-size: 12pt;
+                    }
+                    
+                    /* Typography */
+                    h1, h2, h3 {
+                      color: var(--main-title-color);
+                      margin: 1em 0 0.5em;
+                    }
+                    
+                    h4, h5, h6 {
+                      color: var(--sub-title-color);
+                      margin: 1em 0 0.5em;
+                    }
+                    
+                    p {
+                      margin-bottom: 0.5em;
+                    }
+                    
+                    /* Code Blocks */
+                    code {
+                      background-color: var(--code-background);
+                      padding: 2px 4px;
+                      border-radius: 4px;
+                      font-family: 'Fira Code', monospace;
+                      font-size: 0.9em;
+                    }
+                    
+                    pre {
+                      background-color: var(--code-background);
+                      padding: 1em;
+                      border-radius: 4px;
+                      white-space: pre-wrap;
+                      word-wrap: break-word;
+                      overflow-x: auto;
+                    }
+                    
+                    /* Tables */
+                    table {
+                      border-collapse: collapse;
+                      width: 100%;
+                      margin-bottom: 1em;
+                    }
+                    
+                    th, td {
+                      border: 1px solid var(--border-color);
+                      padding: 8px;
+                      text-align: left;
+                    }
+                    
+                    th {
+                      background-color: rgba(85, 85, 85, 0.7);
+                      font-weight: bold;
+                    }
+                    
+                    /* Form Elements */
+                    input, textarea {
+                      border: 1px solid var(--input-border-color);
+                      color: var(--text-color);
+                      background-color: var(--input-background);
+                      padding: 8px;
+                      border-radius: 4px;
+                    }
+                    
+                    /* Print Styles */
+                    @media print {
+                      body {
+                        background-image: none;
+                        background-color: white;
+                        color: black;
+                      }
+                      
+                      h1, h2, h3 {
+                        color: #fbb022;
+                      }
+                      
+                      h4, h5, h6 {
+                        color: #d94f8b;
+                      }
+                    }
             </style>
         </head>
         <body>
