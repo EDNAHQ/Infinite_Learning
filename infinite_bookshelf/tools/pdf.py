@@ -20,7 +20,7 @@ def create_pdf_file(content: str) -> BytesIO:
         <head>
             <style>
                 @page {{
-                    margin: 1cm;  /* Set margins for print to 1cm */
+                    margin: 2cm;  /* Set margins for print to 1cm */
                 }}
                 body {{
                     margin: 0;                      /* Remove default margins */
