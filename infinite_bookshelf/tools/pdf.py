@@ -23,7 +23,7 @@ def create_pdf_file(content: str) -> BytesIO:
                     margin: 2cm;  /* Set margins for print to 1cm */
                 }}
                 body {{
-                    margin: 0;                      /* Remove default margins */
+                    margin: 1cm;                      /* Remove default margins */
                     background-color: black;        /* Set background to black */
                     color: white;                   /* Set default text color to white */
                     font-family: 'Poppins', sans-serif; 
