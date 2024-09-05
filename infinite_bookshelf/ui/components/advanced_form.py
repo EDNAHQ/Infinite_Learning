@@ -35,7 +35,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
             help="Generates content for each section of the book",
         )
         st.markdown("\n")
-        st.image("assets/logo/1.png", width=250)
+        st.image("assets/logo/1.png", width=280)
 
     with st.form("groqform"):
         st.info(
