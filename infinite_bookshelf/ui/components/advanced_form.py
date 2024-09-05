@@ -4,7 +4,7 @@ MODEL_LIST = ["llama3-70b-8192", "llama3-8b-8192", "gemma2-9b-it"]
 
 
 def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Generate"):
-    st.sidebar.title("Select AI Models")
+    st.sidebar.title("EDNA Infinite Learning")
 
     # Sidebar content
     with st.sidebar:
@@ -31,7 +31,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         section_agent_model = st.selectbox(
             "Section Agent Model",
             MODEL_LIST,
-            index=1,
+            index=0,
             help="Generates content for each section of the book",
         )
         st.markdown("\n")
