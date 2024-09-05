@@ -48,7 +48,10 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
                 "Enter your Groq API Key (gsk_yA...):", "", type="password"
             )
         else:
-            groq_input_key = None
+            groq_input_key = st.text_input(
+                "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", 
+                st.session_state["api_key"], 
+                type="password"
 
         st.subheader("Topic")
         topic_text = st.text_input(
