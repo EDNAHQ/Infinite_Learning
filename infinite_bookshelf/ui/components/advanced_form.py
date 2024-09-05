@@ -9,7 +9,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
     # Sidebar content
     with st.sidebar:
         st.warning(
-            "🚧 Advanced Mode is in beta: You're using a version with experimental features."
+            "🚧 Welcome to EDNA Infinite Learning - Get amazed by the speed you can learn anything. Customize, organize and learn! ."
         )
         st.markdown("### For creating book title:")
         title_agent_model = st.selectbox(
@@ -39,7 +39,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
 
     with st.form("groqform"):
         st.info(
-            "You are using advanced mode with additional features. Visit [here](/) to use the streamlined version."
+            "Input as much information below to guide the AI to create comprehensive and quality content"
         )
 
         if not st.session_state.get("api_key"):
