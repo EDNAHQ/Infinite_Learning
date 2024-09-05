@@ -9,7 +9,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
     # Sidebar content
     with st.sidebar:
         st.warning(
-            "🚧 Welcome to EDNA Infinite Learning - Get amazed by the speed you can learn anything. Customize, organize and learn! ."
+            "Welcome to EDNA Infinite Learning - Get amazed by the speed you can learn anything. Customize, organize and learn! ."
         )
         st.markdown("### For creating book title:")
         title_agent_model = st.selectbox(
