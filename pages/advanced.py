@@ -20,7 +20,10 @@ from infinite_bookshelf.ui import Book, load_return_env, ensure_states
 
 
 # 2: Initialize env variables and session states
-GROQ_API_KEY = load_return_env(["GROQ_API_KEY"])["GROQ_API_KEY"]
+# GROQ_API_KEY = load_return_env(["GROQ_API_KEY"])["GROQ_API_KEY"]
+
+# 2: Initialize env variables and session states
+GROQ_API_KEY = "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"
 
 states = {
     "api_key": GROQ_API_KEY,
