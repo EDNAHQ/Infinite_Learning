@@ -12,13 +12,13 @@ def create_pdf_file(content: str) -> BytesIO:
         <head>
             <style>
                 :root {{ --text-color: #000; --bg-color: #fff; --title-color: #fbb022; --sub-title-color: #d94f8b; 
-                            --code-bg: rgba(51,51,51,0.7); --border-color: #444; --input-bg: rgba(34,34,34,0.7); --input-border: #4A90E2; }}
+                            --code-bg: #ca5a8b; --border-color: #444; --input-bg: #ca5a8b; --input-border: #ca5a8b; }}
                 @page {{ size: A4; margin: 1cm 0cm; }}
                 body {{ margin: 0cm; padding: 1cm; background: var(--bg-color); color: var(--text-color); font: 12pt Arial; }}
                 h1, h2, h3 {{ color: var(--title-color); margin: 1cm 0 1cm; }}
                 h4, h5, h6 {{ color: var(--sub-title-color); margin: 1cm 0 1cm; }}
                 p {{ margin-bottom: 1cm; margin-top: 1cm; }}
-                code {{ background: var(--code-bg); padding: 2px 4px; border-radius: 4px; font: 0.9em 'Courier New'; }}
+                code {{ background: var(--code-bg); padding: 2px 4px; border-radius: 4px; font: 0.9em 'Arial'; }}
                 pre {{ background: var(--code-bg); padding: 1em; border-radius: 4px; white-space: pre-wrap; overflow-x: auto; }}
                 table {{ border-collapse: collapse; width: 100%; margin-bottom: 1em; }}
                 th, td {{ border: 1px solid var(--border-color); padding: 8px; }}
