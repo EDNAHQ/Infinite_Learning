@@ -11,7 +11,7 @@ def create_pdf_file(content: str) -> BytesIO:
     <html>
         <head>
             <style>
-                :root {{ --text-color: #fff; --bg-color: #000; --title-color: #fbb022; --sub-title-color: #d94f8b; 
+                :root {{ --text-color: #000; --bg-color: #fff; --title-color: #fbb022; --sub-title-color: #d94f8b; 
                             --code-bg: rgba(51,51,51,0.7); --border-color: #444; --input-bg: rgba(34,34,34,0.7); --input-border: #4A90E2; }}
                 @page {{ size: A4; margin: 1cm 0cm; }}
                 body {{ margin: 0cm; padding: 1cm; background: var(--bg-color); color: var(--text-color); font: 12pt Arial; }}
@@ -24,7 +24,7 @@ def create_pdf_file(content: str) -> BytesIO:
                 th, td {{ border: 1px solid var(--border-color); padding: 8px; }}
                 th {{ background: rgba(85,85,85,0.7); font-weight: bold; }}
                 input, textarea {{ border: 1px solid var(--input-border); color: var(--text-color); background: rgba(34, 34, 34, 0.7); padding: 8px; border-radius: 4px; }}
-                @media print {{ body {{ background: #000; color: #fff; }} h1, h2, h3 {{ color: #fbb022; }} h4, h5, h6 {{ color: #d94f8b; }} }}
+                @media print {{ body {{ background: #fff; color: #000; }} h1, h2, h3 {{ color: #fbb022; }} h4, h5, h6 {{ color: #d94f8b; }} }}
             </style>
         </head>
         <body>{html_content}</body>
