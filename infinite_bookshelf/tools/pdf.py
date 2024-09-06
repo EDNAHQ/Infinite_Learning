@@ -13,8 +13,9 @@ def create_pdf_file(content: str) -> BytesIO:
             <style>
                 :root {{ --text-color: #fff; --bg-color: #000; --title-color: #fbb022; --sub-title-color: #d94f8b; 
                             --code-bg: rgba(51,51,51,0.7); --border-color: #444; --input-bg: rgba(34,34,34,0.7); --input-border: #4A90E2; }}
-                @page {{ size: A4; margin: 0.4cm 0cm; }}
+                @page {{ size: A4; margin: 1cm 0cm; }}
                 body {{ margin: 0cm; padding: 1cm; background: var(--bg-color); color: var(--text-color); font: 12pt Arial; }}
+                html, body { height: 100%; background: var(--bg-color); }
                 h1, h2, h3 {{ color: var(--title-color); margin: 1cm 0 1cm; }}
                 h4, h5, h6 {{ color: var(--sub-title-color); margin: 1cm 0 1cm; }}
                 p {{ margin-bottom: 1cm; margin-top: 1cm; }}
