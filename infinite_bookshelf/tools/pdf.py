@@ -17,7 +17,7 @@ def create_pdf_file(content: str) -> BytesIO:
                 body {{ margin: 1cm; padding: 1cm; background: var(--bg-color); color: var(--text-color); font: 12pt Arial; }}
                 h1, h2, h3 {{ color: var(--title-color); margin: 1cm 0 1cm; }}
                 h4, h5, h6 {{ color: var(--sub-title-color); margin: 1cm 0 1cm; }}
-                p {{ margin-bottom: 1cm; }}
+                p {{ margin-bottom: 1cm; margin-top: 1cm; }}
                 code {{ background: var(--code-bg); padding: 2px 4px; border-radius: 4px; font: 0.9em 'Courier New'; }}
                 pre {{ background: var(--code-bg); padding: 1em; border-radius: 4px; white-space: pre-wrap; overflow-x: auto; }}
                 table {{ border-collapse: collapse; width: 100%; margin-bottom: 1em; }}
