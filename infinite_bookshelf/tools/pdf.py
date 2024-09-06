@@ -23,7 +23,7 @@ def create_pdf_file(content: str) -> BytesIO:
                 table {{ border-collapse: collapse; width: 100%; margin-bottom: 1em; }}
                 th, td {{ border: 1px solid var(--border-color); padding: 8px; }}
                 th {{ background: rgba(85,85,85,0.7); font-weight: bold; }}
-                input, textarea {{ border: 1px solid var(--input-border); color: var(--text-color); background: rgba(34, 34, 34, 0.7); padding: 8px; border-radius: 4px; }}
+                input, textarea {{ border: 1px solid var(--input-border); color: #fff; background: #ca5a8b; padding: 8px; border-radius: 4px; }}
                 @media print {{ body {{ background: #fff; color: #000; }} h1, h2, h3 {{ color: #fbb022; }} h4, h5, h6 {{ color: #d94f8b; }} }}
             </style>
         </head>
