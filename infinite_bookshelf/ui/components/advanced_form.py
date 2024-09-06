@@ -10,7 +10,7 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
     with st.sidebar:
         st.markdown(
             """
-            <div style="background-color: #fbb022; padding: 20px; border-radius: 10px;">
+            <div style="background-color: #fbb022; padding: 10px; border-radius: 10px;">
                 <p style="color: white;">
                 Get amazed by the speed you can learn anything. Customize, organize and learn!
                 </p>
