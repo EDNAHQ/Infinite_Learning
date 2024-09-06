@@ -8,9 +8,18 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
 
     # Sidebar content
     with st.sidebar:
-        st.warning(
-            "Welcome to EDNA Infinite Learning - Get amazed by the speed you can learn anything. Customize, organize and learn! ."
+        st.markdown(
+            """
+            <div style="background-color: #fbb022; padding: 5px; border-radius: 2px;">
+                <h3 style="color: white;">Welcome to EDNA Infinite Learning</h3>
+                <p style="color: white;">
+                Get amazed by the speed you can learn anything. Customize, organize and learn!
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
+        
         st.markdown("### For creating book title:")
         title_agent_model = st.selectbox(
             "Title Agent Model",
@@ -37,9 +46,11 @@ def render_advanced_groq_form(on_submit, button_disabled=False, button_text="Gen
         st.markdown("\n")
         st.image("assets/logo/1.png", width=280)
 
+
+
     with st.form("groqform"):
         st.info(
-            "Input as much information below to guide the AI to create comprehensive and quality content"
+            "Input as much information you can below to guide the AI to create quality content"
         )
 
         if not st.session_state.get("api_key"):
